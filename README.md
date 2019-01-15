@@ -18,10 +18,12 @@ This is a web app developed with React.js
 
 
 ### Components
-Form.js 
-- submit your todos with name and description
-ToCheck.js
-- line through the tasks you completed 
-ToDos.js
-- add to dos and delete them
+- Form.js 
+submit your todos with name and description
+
+- ToCheck.js
+line through the tasks you completed 
+
+-ToDos.js
+add to dos and delete them
 
