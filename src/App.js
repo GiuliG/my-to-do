@@ -1,14 +1,19 @@
+'Use strict';
 import React, { Component } from 'react';
-import ToDos from './components/ToDos';
 import './App.css';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-     <h1>My to-do list:</h1>
-        <ToDos/>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path='*' component={NotFound} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

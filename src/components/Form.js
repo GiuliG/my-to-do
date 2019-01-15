@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-//import Error from '../helpers/Error';
 
 class Form extends Component {
     state = {
@@ -9,11 +8,11 @@ class Form extends Component {
         error: undefined,
     }
 
-    handleChange = (e) => {
+    handleChange = (input) => {
         this.setState({
-            [e.target.name]: e.target.value,
-            [e.target.text]: e.target.value,
-        });
+           name: input,
+           text: input, 
+        }/*, ()=>console.log(input)*/);
     }
 
     handleSubmit = (e) => {
@@ -37,8 +36,8 @@ class Form extends Component {
         }
         this.setState({
             //it does not clean the search bar, to check
-            name: "",
-            text: "",
+            name:"",
+            text:"",
         })
     }
 
@@ -52,10 +51,10 @@ class Form extends Component {
             <div className="todoListMain">
                 <div className="header">
                     <form onSubmit={this.handleSubmit}>
-                        <input name="name" onChange={this.handleChange} placeholder="Name" />
-                        <input name="text" onChange={this.handleChange} placeholder="Add description" />
-                        <button type="submit" onClick={this.handleSubmit} > Add Task </button>
-                        
+                        <input name="name" onChange={ (e) => this.handleChange(e.target.value)} 
+                        placeholder="Name" />
+                        <input name="text" onChange={ (e) => this.handleChange(e.target.value)} placeholder="Add description" />
+                        <button type="submit" onClick={this.handleSubmit} > Add Task </button> 
                     </form>
                 </div>
             </div>
