@@ -49,8 +49,8 @@ class Form extends Component {
 
         return (
             <div className="formWrapper">
-                <div className="header">
-                    <form onSubmit={this.handleSubmit}  className="input">
+                <div>
+                    <form onSubmit={this.handleSubmit}  >
                         <input name="name" onChange={ (e) => this.handleChange(e.target.value)} 
                         placeholder="Name" />
                         <input name="text" onChange={ (e) => this.handleChange(e.target.value)} placeholder="Add description" />
