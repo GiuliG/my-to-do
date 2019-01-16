@@ -3,7 +3,7 @@ import React from 'react';
 
 
 export default (props) =>(
-    <div
+    <div className="todoBox"
     style={{
       textDecoration: props.todo.complete ? "line-through" : ""
     }} onClick={props.toggleComplete}>
@@ -11,7 +11,7 @@ export default (props) =>(
         <h3>Title: {props.todo.name}</h3>
         <p>Description: {props.todo.text}</p>
         <p>Creation Date: {props.todo.dateFormat}</p>
-        <button onClick={props.onDelete}>Delete</button>  
+        <button className="submitButton" onClick={props.onDelete}>Delete</button>  
        
   </div>
 

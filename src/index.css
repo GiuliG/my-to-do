@@ -1,14 +1,119 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lato|Permanent+Marker');
+
+
+.formWrapper{
+  margin: 2.2rem 2rem 2rem 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.submitButton{
+  border: none;
+  margin: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 18px;
+  font-family: 'Droid Sans', sans-serif;
+  background-color: 	#1E90FF;
+  color: #fff;
+  transition: 0.2s ease-out;
+}
+
+.submitButton:hover{
+  background-color: #008B8B;
+  color: #fff;
+  transition: 0.2s ease-out;
+}
+
+input{
+  width: 90%;
+  min-width: 90%;
+  font-size: 1.3em;
+  padding-left: 20px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-family: 'Droid Sans', sans-serif;
+  background-color: #FFFAFA;
+  color: black;
+  transition: 0.2s ease-out;
+}
+
+input:focus{
+  background-color: #E4F1FE;
+  color: #111;
+  transition: 0.2s ease-in;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #FFFAFA;
+  text-align: center;
+  font-size: 52px;
+}
+
+h3{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  color: #2F4F4F;
+}
+
+.formWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+.todoBox {
+  padding:10px 10px 38px 24px;
+  height: auto; 
+  margin: 2.2rem 0rem 10rem 2rem;
+  margin-bottom: 8px;
+  width: 85%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4em;
+  color: #2F4F4F;
+  background-color: #FFFAFA; 
+  border-radius: 3px;
+  opacity: 1;
+  box-shadow: 2px 4px 16px rgba(86, 79, 78, 0.3);
+}
+
+
+.fade-in {
+    opacity:0;
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards;
+    animation-duration: 0.1s;
+}
+
+.inputContent{
+  float:left;
+  padding-right: 70px;
+  padding-bottom: 10px;
+  display: block;
+  color: #2F4F4F;
+}
+
+.closebtn {
+    color: #1E90FF;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+
+.closebtn:hover {
+    color: #AC2500;
+}
+
+.toDoLeft {
+  float:left;
+  padding-right: 70px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  display: block;
+  color: #FFFAFA;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 18px;
 }

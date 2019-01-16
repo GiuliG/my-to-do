@@ -48,13 +48,13 @@ class Form extends Component {
     render() {
 
         return (
-            <div className="todoListMain">
+            <div className="formWrapper">
                 <div className="header">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}  className="input">
                         <input name="name" onChange={ (e) => this.handleChange(e.target.value)} 
                         placeholder="Name" />
                         <input name="text" onChange={ (e) => this.handleChange(e.target.value)} placeholder="Add description" />
-                        <button type="submit" onClick={this.handleSubmit} > Add Task </button> 
+                        <button type="submit" onClick={this.handleSubmit} className="submitButton"> Add Task </button> 
                     </form>
                 </div>
             </div>
