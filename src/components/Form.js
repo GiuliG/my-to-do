@@ -8,11 +8,11 @@ class Form extends Component {
         error: undefined,
     }
 
-    handleChange = (input) => {
+    handleChange = (e) => {
         this.setState({
-           name: input,
-           text: input, 
-        }/*, ()=>console.log(input)*/);
+            [e.target.name]: e.target.value,
+            [e.target.text]: e.target.value,
+        },()=>console.log(e));
     }
 
     handleSubmit = (e) => {
@@ -51,9 +51,9 @@ class Form extends Component {
             <div className="formWrapper">
                 <div>
                     <form onSubmit={this.handleSubmit}  >
-                        <input name="name" onChange={ (e) => this.handleChange(e.target.value)} 
+                        <input name="name" onChange={this.handleChange} 
                         placeholder="Name" />
-                        <input name="text" onChange={ (e) => this.handleChange(e.target.value)} placeholder="Add description" />
+                        <input name="text" onChange={this.handleChange} placeholder="Add description" />
                         <button type="submit" onClick={this.handleSubmit} className="submitButton"> Add Task </button> 
                     </form>
                 </div>
